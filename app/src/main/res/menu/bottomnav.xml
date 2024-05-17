@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/login"
+        android:icon="@drawable/login"
+        android:title="LogIn"/>
+
+    <item android:id="@+id/subcription"
+        android:icon="@drawable/subscriptions"
+        android:title="Subcription"/>
+
+    <item android:id="@+id/video"
+        android:icon="@drawable/video_library"
+        android:title="Video"/>
+
+    <item android:id="@+id/fire"
+        android:icon="@drawable/status"
+        android:title="Status"
+        />
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="LogOut"/>
+
+</menu>
