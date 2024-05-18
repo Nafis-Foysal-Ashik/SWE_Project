@@ -1,7 +1,6 @@
 package com.example.study;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -26,34 +25,17 @@ public class MainActivity extends AppCompatActivity {
 
         activityFactory = new ActivityFactory();
 
-        math.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(activityFactory.createActivity(MainActivity.this, MathActivity.class));
-                finish();
-            }
-        });
+        setOnClickListener(math, MathActivity.class);
+        setOnClickListener(che, ChemistryActivity.class);
+        setOnClickListener(phe, PhysicsActivity.class);
+        setOnClickListener(bio, BiologyActivity.class);
+    }
 
-        che.setOnClickListener(new View.OnClickListener() {
+    private void setOnClickListener(ShapeableImageView imageView, final Class<?> activityClass) {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(activityFactory.createActivity(MainActivity.this, ChemistryActivity.class));
-                finish();
-            }
-        });
-
-        phe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(activityFactory.createActivity(MainActivity.this, PhysicsActivity.class));
-                finish();
-            }
-        });
-
-        bio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(activityFactory.createActivity(MainActivity.this, BiologyActivity.class));
+                startActivity(activityFactory.createActivity(MainActivity.this, activityClass));
                 finish();
             }
         });

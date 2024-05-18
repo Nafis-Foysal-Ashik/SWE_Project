@@ -5,7 +5,7 @@ import android.content.Intent;
 
 public class ActivityFactory {
 
-    public Intent createActivity(Context context, Class<?> cls) {
-        return new Intent(context, cls);
+    public Intent createActivity(Context context, Class<?> activityClass) {
+        return new Intent(context, activityClass);
     }
 }

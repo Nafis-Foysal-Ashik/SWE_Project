@@ -10,21 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ChemistryActivity extends AppCompatActivity {
 
-    private static ChemistryActivity instance;
-
-    EditText[] editTexts;
-    Button[] buttons;
-    Question[] questions;
-
-    ChemistryActivity() {
-    }
-
-    public static ChemistryActivity getInstance() {
-        if (instance == null) {
-            instance = new ChemistryActivity();
-        }
-        return instance;
-    }
+    private EditText[] editTexts;
+    private Button[] buttons;
+    private Question[] questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,35 +66,35 @@ public class ChemistryActivity extends AppCompatActivity {
         boolean checkAnswer(String answer);
     }
 
-    class Question1 implements Question {
+    static class Question1 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
             return answer.equalsIgnoreCase("H2O");
         }
     }
 
-    class Question2 implements Question {
+    static class Question2 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
             return answer.equalsIgnoreCase("6");
         }
     }
 
-    class Question3 implements Question {
+    static class Question3 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
             return answer.equalsIgnoreCase("Au");
         }
     }
 
-    class Question4 implements Question {
+    static class Question4 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
             return answer.equalsIgnoreCase("7");
         }
     }
 
-    class Question5 implements Question {
+    static class Question5 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
             return answer.equalsIgnoreCase("50");
