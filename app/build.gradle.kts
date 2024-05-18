@@ -44,6 +44,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
     implementation("com.google.firebase:firebase-database:21.0.0")
+    testImplementation ("org.mockito:mockito-core:3.11.2")
 
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation ("androidx.test.espresso:espresso-intents:3.4.0")

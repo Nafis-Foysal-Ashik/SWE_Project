@@ -15,26 +15,33 @@
         android:theme="@style/Theme.Material3.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".StudyMaterialsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".Grade"
             android:exported="false" />
         <activity
             android:name=".Homepage"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".Mixed_Question"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Mixed_Question" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".InfoActivity"
             android:exported="false" />
         <activity
             android:name=".CallActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".HomoActivity"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".HomeActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".HomoActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".HomeActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">

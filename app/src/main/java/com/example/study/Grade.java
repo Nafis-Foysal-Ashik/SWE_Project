@@ -14,6 +14,7 @@ public class Grade extends AppCompatActivity {
     EditText edt;
     Button btn;
     TextView tv;
+    GradeCalculator calculator;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -24,43 +25,16 @@ public class Grade extends AppCompatActivity {
         edt = findViewById(R.id.gradedt);
         btn = findViewById(R.id.gradebtn);
         tv = findViewById(R.id.grade_output);
+        calculator = new GradeCalculator();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String mark = edt.getText().toString();
                 int number = Integer.parseInt(mark);
-
-                if(number>100)
-                {
-                    tv.setText("Please Enter Valid Mark");
-                }
-                else if(number>=80)
-                {
-                    tv.setText("Congratulations !!! You have got A+");
-                }
-                else if(number>=70 && number<80)
-                {
-                    tv.setText("Congratulations !!! You have got A");
-                }
-
-                else if(number>=60 && number<70)
-                {
-                    tv.setText("Congratulations !!! You have got A-");
-                }
-
-                else if(number>=50 && number<60)
-                {
-                    tv.setText("Congratulations !!! You have got B+");
-                }
-
-                else
-                {
-                    tv.setText("Sorry Your grade is F");
-                }
-
+                String grade = calculator.calculateGrade(number);
+                tv.setText(grade);
             }
         });
-
     }
 }

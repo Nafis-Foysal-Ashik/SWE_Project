@@ -8,7 +8,11 @@ import com.google.android.material.imageview.ShapeableImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ShapeableImageView math,che,phe,bio;
+    ShapeableImageView math;
+    ShapeableImageView che;
+    ShapeableImageView phe;
+    ShapeableImageView bio;
+    ActivityFactory activityFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,15 +20,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         math = findViewById(R.id.math);
-        che=findViewById(R.id.che);
-        phe=findViewById(R.id.phe);
-        bio=findViewById(R.id.bio);
+        che = findViewById(R.id.che);
+        phe = findViewById(R.id.phe);
+        bio = findViewById(R.id.bio);
+
+        activityFactory = new ActivityFactory();
 
         math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MathActivity.class);
-                startActivity(intent);
+                startActivity(activityFactory.createActivity(MainActivity.this, MathActivity.class));
                 finish();
             }
         });
@@ -32,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
         che.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ChemistryActivity.class);
-                startActivity(intent);
+                startActivity(activityFactory.createActivity(MainActivity.this, ChemistryActivity.class));
                 finish();
             }
         });
@@ -41,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
         phe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PhysicsActivity.class);
-                startActivity(intent);
+                startActivity(activityFactory.createActivity(MainActivity.this, PhysicsActivity.class));
                 finish();
             }
         });
@@ -50,11 +53,9 @@ public class MainActivity extends AppCompatActivity {
         bio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BiologyActivity.class);
-                startActivity(intent);
+                startActivity(activityFactory.createActivity(MainActivity.this, BiologyActivity.class));
                 finish();
             }
         });
-
     }
 }

@@ -1,9 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- res/layout/activity_recycler_view.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RecyclerViewActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editTextNewTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter new task"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/buttonAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:padding="16dp"
+        android:layout_below="@id/editTextNewTask"
+        android:layout_centerHorizontal="true" /> <!-- Center horizontally -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAddTask"
+        android:layout_above="@+id/buttonShowTasks"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/buttonShowTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Tasks"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" /> <!-- Center horizontally and align to the bottom -->
+
+</RelativeLayout>
