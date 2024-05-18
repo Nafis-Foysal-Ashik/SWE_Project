@@ -1,32 +1,28 @@
-name: Android Build
+name: AndroidBuild
 
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.13.0
         with:
-          java-version: 11
+          java-version: "17"
           distribution: "adopt"
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
+      - name: Grant execute permission to gradlew
+        run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew assembleDebug --info
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
+        run: ./gradlew build
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.3
         with:
-          name: app
+          name: AndroidCICD.apk
           path: app/build/outputs/apk/debug/app-debug.apk
