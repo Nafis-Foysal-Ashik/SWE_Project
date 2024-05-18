@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     ShapeableImageView math;
     ShapeableImageView che;
-    ShapeableImageView phe;
+    //ShapeableImageView phe;
     ShapeableImageView bio;
     ActivityFactory activityFactory;
 
@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
 
         math = findViewById(R.id.math);
         che = findViewById(R.id.che);
-        phe = findViewById(R.id.phe);
+        //phe = findViewById(R.id.phe);
         bio = findViewById(R.id.bio);
 
         activityFactory = new ActivityFactory();
 
         setOnClickListener(math, MathActivity.class);
         setOnClickListener(che, ChemistryActivity.class);
-        setOnClickListener(phe, PhysicsActivity.class);
+        //setOnClickListener(phe, PhysicsActivity.class);
         setOnClickListener(bio, BiologyActivity.class);
     }
 
