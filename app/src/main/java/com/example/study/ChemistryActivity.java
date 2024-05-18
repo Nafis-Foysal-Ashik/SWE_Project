@@ -1,7 +1,6 @@
 package com.example.study;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,13 +8,23 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.function.Function;
-
 public class ChemistryActivity extends AppCompatActivity {
+
+    private static ChemistryActivity instance;
 
     EditText[] editTexts;
     Button[] buttons;
     Question[] questions;
+
+    ChemistryActivity() {
+    }
+
+    public static ChemistryActivity getInstance() {
+        if (instance == null) {
+            instance = new ChemistryActivity();
+        }
+        return instance;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +51,9 @@ public class ChemistryActivity extends AppCompatActivity {
         questions = new Question[]{
                 new Question1(),
                 new Question2(),
-                // Initialize other questions if needed
+                new Question3(),
+                new Question4(),
+                new Question5()
         };
 
         // Set click listeners for each button
@@ -66,42 +77,39 @@ public class ChemistryActivity extends AppCompatActivity {
     public interface Question {
         boolean checkAnswer(String answer);
     }
-    public class Question1 implements Question {
+
+    class Question1 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("Deoxyribonucleic Acid");
+            return answer.equalsIgnoreCase("H2O");
         }
     }
 
-    public class Question2 implements Question {
+    class Question2 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("nafis");
+            return answer.equalsIgnoreCase("6");
         }
     }
 
-    public class Question3 implements Question {
+    class Question3 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("nafis");
+            return answer.equalsIgnoreCase("Au");
         }
     }
 
-    public class Question4 implements Question {
+    class Question4 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("nafis");
+            return answer.equalsIgnoreCase("7");
         }
     }
 
-    public class Question5 implements Question {
+    class Question5 implements Question {
         @Override
         public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("nafis");
+            return answer.equalsIgnoreCase("50");
         }
     }
-
-// Similarly, create classes for Question3, Question4, and Question5 if needed
-
-
 }
