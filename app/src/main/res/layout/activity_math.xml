@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:fillViewport="true"
     tools:context=".MainActivity"
-    android:background="@drawable/quize"
+    android:background="@drawable/nafisz"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
