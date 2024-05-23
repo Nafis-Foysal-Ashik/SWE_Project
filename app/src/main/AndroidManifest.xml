@@ -54,9 +54,9 @@
         <activity
             android:name=".ChemistryActivity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".PhysicsActivity"-->
-<!--            android:exported="false" />-->
+       <activity
+            android:name=".PhysicsActivity"
+           android:exported="false" />
         <activity
             android:name=".BiologyActivity"
             android:exported="false" />
