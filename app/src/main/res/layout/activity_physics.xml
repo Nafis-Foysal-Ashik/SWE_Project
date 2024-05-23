@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/infinity"
+
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PhysicsActivity">
+
+
+        <TextView
+            android:id="@+id/textView14"
+            android:text="(Q.1) Which of the following substances has highest density?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <Button
+            android:id="@+id/q1ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(A) Thermocol"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.022"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <Button
+            android:id="@+id/q1bp"
+            android:layout_width="128dp"
+            android:layout_height="46dp"
+            android:text="(B) Steam"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.705"
+            app:layout_constraintStart_toEndOf="@+id/q1ap"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q1cp"
+            android:layout_width="138dp"
+            android:layout_height="46dp"
+            android:text="(C) Oil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.032"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q1bp"
+            app:layout_constraintVertical_bias="0.018" />
+
+        <Button
+            android:id="@+id/q1dp"
+            android:layout_width="124dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:text="(D) Ice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.696"
+            app:layout_constraintStart_toEndOf="@+id/q1cp"
+            app:layout_constraintTop_toBottomOf="@+id/q1bp"
+            app:layout_constraintVertical_bias="0.015" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Q.2) The volume will _____ on increasing temparature ."
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <Button
+            android:id="@+id/q2ap"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:text="(A) Increase"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <Button
+            android:id="@+id/q2bp"
+            android:layout_width="146dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            android:text="(B) Decrease"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/q2ap"
+            app:layout_constraintTop_toBottomOf="@+id/textView17"
+            app:layout_constraintVertical_bias="0.016" />
+
+
+        <Button
+            android:id="@+id/q2cp"
+            android:layout_width="139dp"
+            android:layout_height="48dp"
+            android:text="(C)Stay Same"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q2bp"
+            app:layout_constraintVertical_bias="0.01" />
+
+        <Button
+            android:id="@+id/q2dp"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:text="(D) Undeterministic"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintStart_toEndOf="@+id/q2cp"
+            app:layout_constraintTop_toBottomOf="@+id/q2bp"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Q.3) Given voltage is 32V and current is 2A,find the value of resistance."
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <Button
+            android:id="@+id/q3ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(A) 14 ohms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.007" />
+
+
+        <Button
+            android:id="@+id/q3bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(B) 17 ohms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintStart_toEndOf="@+id/q3ap"
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            app:layout_constraintVertical_bias="0.006" />
+
+        <Button
+            android:id="@+id/q3cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(C) 15 ohms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q3ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(D) 16 ohms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toEndOf="@+id/q3cp"
+            app:layout_constraintTop_toBottomOf="@+id/q3bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/q4p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Q.4)Earthquake produces which kinds of sound before the main shock wave begins?"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q3cp"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <Button
+            android:id="@+id/q4pa"
+            android:layout_width="151dp"
+            android:layout_height="48dp"
+            android:text="(A) Ultrasound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q4p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q4pb"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:text="(B) Infrasound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintStart_toStartOf="@+id/q4pa"
+
+            app:layout_constraintTop_toBottomOf="@+id/q4p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q4pc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(C)Audible Sound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q4pa"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q4pd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(D) None of above"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="@+id/q4pc"
+
+            app:layout_constraintTop_toBottomOf="@+id/q4pb"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/q5p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Q.5)Water waves produced by a motor boat sailing in water are :"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q4pc"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q5ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(A) Nither longitudinal nor transverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q5p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q5bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(B) Both longitudinal and transverse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q5ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q5cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(C) Only Longitudinal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q5bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(D) None of above "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q5cp"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/q6p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="(Q.6)A car initially at rest travels 20 m in 4 sec along a straight
+                    line with constant acceleration .Find the acceleration of car."
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q5dp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q6ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(A) 4.9 m/s^2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q6p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q6bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="(B) 2.5 m/s^2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.855"
+            app:layout_constraintStart_toStartOf="@+id/q6ap"
+
+            app:layout_constraintTop_toBottomOf="@+id/q6p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q6cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="(C) 0.4 m/s^2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q6ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(D) 1.6 m/s^2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@+id/q6cp"
+            app:layout_constraintTop_toBottomOf="@+id/q6bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/q7p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Q.7)How much work is done in moving a charge of 5 C across
+                two points having a potential difference of 16 v?"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q6cp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q7ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(A) 65 J"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q7p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q7bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(B) 45 J"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.869"
+            app:layout_constraintStart_toStartOf="@+id/q7ap"
+
+            app:layout_constraintTop_toBottomOf="@+id/q7p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q7cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(C) 40 J"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q7ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(D) 80 J"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.866"
+            app:layout_constraintStart_toStartOf="@+id/q7cp"
+
+            app:layout_constraintTop_toBottomOf="@+id/q7bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/q8p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="(Q.8)If a man shouts loudly close to a high flat hill surface at a distance of 100 m from man ,how long after the shout will the echo be heard?(speed of sound in air=330m/s)"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q7cp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q8ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(A) 6 sec"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q8p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q8bp"
+            android:layout_width="131dp"
+            android:layout_height="44dp"
+            android:text="(B) 6 min"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.975"
+            app:layout_constraintStart_toStartOf="@+id/q8ap"
+
+            app:layout_constraintTop_toBottomOf="@+id/q8p"
+            app:layout_constraintVertical_bias="0.005" />
+
+        <Button
+            android:id="@+id/q8cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(C) 0.6 sec"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q8ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="(D) 0.06 sec"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/q8cp"
+            app:layout_constraintTop_toBottomOf="@+id/q8bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/q9p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="(Q.9) If three resistors of equal resistance R is in parallel
+                            and this combination is in series with another resistance R ,then
+                            the equivalent resistance across the circuit will be ___:"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q8cp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q9ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="(A) 4R/3 "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/q9p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q9bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="(B) 3R/4 "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.934"
+            app:layout_constraintStart_toStartOf="@+id/q9ap"
+
+            app:layout_constraintTop_toBottomOf="@+id/q9p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q9cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="(C) R/3 "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q9ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="(D) R/4 "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintStart_toStartOf="@+id/q9cp"
+            app:layout_constraintTop_toBottomOf="@+id/q9bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/q10p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Q.10) A passenger in a moving bus is thrown forward when the
+                        bus suddenly stops.Which law explain this ?"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q9dp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q10ap"
+            android:layout_width="202dp"
+            android:layout_height="46dp"
+
+            android:text="(A)Newton's first law  "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.035"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q10p"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <Button
+            android:id="@+id/q10bp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="(B)Newton's second law  "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.039"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q10ap"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/q10cp"
+            android:layout_width="202dp"
+            android:layout_height="52dp"
+
+            android:text="(C)Newton's third law  "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/q10bp"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <Button
+            android:id="@+id/q10dp"
+            android:layout_width="202dp"
+            android:layout_height="52dp"
+            android:text="(D) Nothing above  "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q10cp"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <Button
+            android:id="@+id/psb"
+            android:layout_width="202dp"
+            android:layout_height="52dp"
+            android:text="Submit "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/q10dp"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
