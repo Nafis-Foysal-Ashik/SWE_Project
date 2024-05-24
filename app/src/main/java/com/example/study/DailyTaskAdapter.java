@@ -1,4 +1,5 @@
-package com.example.study;// DailyTaskAdapter.java
+package com.example.study;
+
 import android.content.Context;
 import android.content.Intent;
 import android.text.Editable;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class DailyTaskAdapter extends RecyclerView.Adapter<DailyTaskAdapter.DailyTaskViewHolder> {
@@ -36,7 +39,6 @@ public class DailyTaskAdapter extends RecyclerView.Adapter<DailyTaskAdapter.Dail
         holder.editTextTaskNotes.setText(dailyTask.getNotes());
         holder.checkBoxTaskCompleted.setChecked(dailyTask.isCompleted());
 
-        // Update the task's notes when the EditText changes
         holder.editTextTaskNotes.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -50,17 +52,13 @@ public class DailyTaskAdapter extends RecyclerView.Adapter<DailyTaskAdapter.Dail
             public void afterTextChanged(Editable s) {}
         });
 
-        // Update the task's completed status when the CheckBox is checked/unchecked
         holder.checkBoxTaskCompleted.setOnCheckedChangeListener((buttonView, isChecked) -> {
             dailyTask.setCompleted(isChecked);
         });
 
-        // Set click listener to open ShowTaskActivity
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, ShowTaskActivity.class);
-            intent.putExtra("taskName", dailyTask.getName());
-            intent.putExtra("taskNotes", dailyTask.getNotes());
-            intent.putExtra("taskCompleted", dailyTask.isCompleted());
+            intent.putExtra("taskList", new ArrayList<>(dailyTaskList));
             context.startActivity(intent);
         });
     }

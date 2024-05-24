@@ -1,7 +1,10 @@
-package com.example.study;// DailyTask.java
+package com.example.study;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
+//passing data between activities or processes in Android applications-->Parcelable
 public class DailyTask implements Parcelable {
     private String name;
     private String notes;

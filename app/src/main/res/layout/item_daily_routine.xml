@@ -3,20 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/textViewTaskName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Task Name"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:paddingBottom="8dp" />
 
     <EditText
         android:id="@+id/editTextTaskNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your notes" />
+        android:hint="Notes"
+        android:paddingBottom="8dp" />
 
     <CheckBox
         android:id="@+id/checkBoxTaskCompleted"
