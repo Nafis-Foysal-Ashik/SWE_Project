@@ -1,103 +1,82 @@
 package com.example.study;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChemistryActivity extends AppCompatActivity {
 
-    private EditText[] editTexts;
-    private Button[] buttons;
-    private Question[] questions;
+    private TextView questionText;
+    private EditText answerEditText;
+    private Button submitButton;
+
+    private final String[] questions = {
+            "What is the symbol for sodium?",
+            "What is the basic unit of mass in the SI system?",
+            "What is the process of converting a gas into a liquid?",
+            "Which of the following is an alkali metal?",
+            "What is the formula for water?"
+    };
+
+    private final String[] answers = {
+            "Na",  // Case-insensitive matching
+            "gram", // Case-insensitive matching
+            "condensation",
+            "lithium",
+            "H2O"
+    };
+
+    private int currentQuestionIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chemistry);
+        setContentView(R.layout.activity_chemistry); // Set the layout
 
-        // Initialize EditTexts and Buttons
-        editTexts = new EditText[]{
-                findViewById(R.id.edt1),
-                findViewById(R.id.edt2),
-                findViewById(R.id.edt3),
-                findViewById(R.id.edt4),
-                findViewById(R.id.edt5)
-        };
-        buttons = new Button[]{
-                findViewById(R.id.s1b),
-                findViewById(R.id.s2b),
-                findViewById(R.id.s3b),
-                findViewById(R.id.s4b),
-                findViewById(R.id.s5b)
-        };
+        questionText = findViewById(R.id.question_text);
+        answerEditText = findViewById(R.id.answer_edit_text);
+        submitButton = findViewById(R.id.submit_button);
 
-        // Initialize Questions
-        questions = new Question[]{
-                new Question1(),
-                new Question2(),
-                new Question3(),
-                new Question4(),
-                new Question5()
-        };
+        displayQuestion(currentQuestionIndex);
 
-        // Set click listeners for each button
-        for (int i = 0; i < buttons.length; i++) {
-            final int index = i;
-            buttons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String answer = editTexts[index].getText().toString();
-                    boolean isCorrect = questions[index].checkAnswer(answer);
-                    if (isCorrect) {
-                        Toast.makeText(ChemistryActivity.this, "Congratulations! Your answer is correct", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(ChemistryActivity.this, "Sorry, your answer is wrong", Toast.LENGTH_SHORT).show();
-                    }
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String userAnswer = answerEditText.getText().toString().trim();
+                if (TextUtils.isEmpty(userAnswer)) {
+                    Toast.makeText(ChemistryActivity.this, "Please enter your answer.", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-            });
-        }
+
+                // Check answer (case-insensitive)
+                String lowerCaseUserAnswer = userAnswer.toLowerCase();
+                if (lowerCaseUserAnswer.equals(answers[currentQuestionIndex].toLowerCase())) {
+                    Toast.makeText(ChemistryActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ChemistryActivity.this, "Incorrect. The answer is " + answers[currentQuestionIndex], Toast.LENGTH_SHORT).show();
+                }
+
+                // Check if it's the last question
+                if (currentQuestionIndex == questions.length - 1) {
+                    // End of quiz
+                    Toast.makeText(ChemistryActivity.this, "Quiz completed!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Move to next question
+                    currentQuestionIndex++;
+                    displayQuestion(currentQuestionIndex);
+                    answerEditText.setText(""); // Clear answer field for next question
+                }
+            }
+        });
     }
 
-    public interface Question {
-        boolean checkAnswer(String answer);
-    }
-
-    static class Question1 implements Question {
-        @Override
-        public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("H2O");
-        }
-    }
-
-    static class Question2 implements Question {
-        @Override
-        public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("6");
-        }
-    }
-
-    static class Question3 implements Question {
-        @Override
-        public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("Au");
-        }
-    }
-
-    static class Question4 implements Question {
-        @Override
-        public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("7");
-        }
-    }
-
-    static class Question5 implements Question {
-        @Override
-        public boolean checkAnswer(String answer) {
-            return answer.equalsIgnoreCase("50");
-        }
+    private void displayQuestion(int index) {
+        questionText.setText(questions[index]);
     }
 }

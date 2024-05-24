@@ -44,7 +44,7 @@ public class Homepage extends AppCompatActivity {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this , MathActivity.class);
+                Intent intent = new Intent(Homepage.this , InfoActivity.class);
                 startActivity(intent);
             }
         });
