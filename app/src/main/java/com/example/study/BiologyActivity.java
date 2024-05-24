@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BiologyActivity extends AppCompatActivity {
+
     private TextView questionNumberTextView;
     private TextView questionTextView;
     private RadioButton optionA;
@@ -34,11 +35,13 @@ public class BiologyActivity extends AppCompatActivity {
 
 
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biology);
+
 
 
         questionNumberTextView = findViewById(R.id.question_number);
@@ -66,6 +69,8 @@ public class BiologyActivity extends AppCompatActivity {
         questionList.add(new Question(8, "What is the process by which plants lose water vapor through their leaves?", "Transpiration", "Photosynthesis", "Cellular respiration", "Nitrogen fixation", "Transpiration"));
         questionList.add(new Question(9, "Which type of cell division produces four haploid daughter cells?", "Meiosis", "Mitosis", "Binary fission", "Budding", "Meiosis"));
         questionList.add(new Question(10, "What is the function of RNA?", "To carry genetic information from DNA to the ribosomes", "To produce proteins", "To transport materials", "To provide energy", "To carry genetic information from DNA to the ribosomes"));
+
+
 
         loadQuestion();
 
@@ -117,6 +122,7 @@ public class BiologyActivity extends AppCompatActivity {
 
             }
         });
+
 
         show_answerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -177,5 +183,6 @@ public class BiologyActivity extends AppCompatActivity {
         optionC.setBackgroundColor(Color.TRANSPARENT);
         optionD.setBackgroundColor(Color.TRANSPARENT);
     }
+
 
 }
