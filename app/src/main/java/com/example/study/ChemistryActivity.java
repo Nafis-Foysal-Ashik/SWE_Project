@@ -32,6 +32,7 @@ public class ChemistryActivity extends AppCompatActivity {
             "H2O"
     };
 
+    static int count=0;
     private int currentQuestionIndex = 0;
 
     @Override
@@ -48,6 +49,7 @@ public class ChemistryActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String userAnswer = answerEditText.getText().toString().trim();
                 if (TextUtils.isEmpty(userAnswer)) {
                     Toast.makeText(ChemistryActivity.this, "Please enter your answer.", Toast.LENGTH_SHORT).show();
@@ -57,13 +59,14 @@ public class ChemistryActivity extends AppCompatActivity {
                 // Check answer (case-insensitive)
                 String lowerCaseUserAnswer = userAnswer.toLowerCase();
                 if (lowerCaseUserAnswer.equals(answers[currentQuestionIndex].toLowerCase())) {
-                    Toast.makeText(ChemistryActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                    count++;
+                    Toast.makeText(ChemistryActivity.this, "Correct! Your Score: " + count, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ChemistryActivity.this, "Incorrect. The answer is " + answers[currentQuestionIndex], Toast.LENGTH_SHORT).show();
                 }
 
                 if (currentQuestionIndex == questions.length - 1) {
-                    Toast.makeText(ChemistryActivity.this, "Quiz completed!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChemistryActivity.this, "Your Score: " + count, Toast.LENGTH_SHORT).show();
                 } else {
                     currentQuestionIndex++;
                     displayQuestion(currentQuestionIndex);
