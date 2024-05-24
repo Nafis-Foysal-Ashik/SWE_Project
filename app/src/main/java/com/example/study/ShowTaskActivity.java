@@ -1,4 +1,5 @@
-package com.example.study;// ShowTaskActivity.java
+package com.example.study;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -17,7 +18,6 @@ public class ShowTaskActivity extends AppCompatActivity {
 
         taskContainer = findViewById(R.id.taskContainer);
 
-        // Get the data from the intent
         List<DailyTask> taskList = getIntent().getParcelableArrayListExtra("taskList");
 
         if (taskList != null) {
@@ -29,9 +29,10 @@ public class ShowTaskActivity extends AppCompatActivity {
 
     private void addTaskToView(DailyTask task) {
         TextView taskView = new TextView(this);
-        taskView.setText(task.getName() + (task.isCompleted() ? " (Completed)" : ""));
+        String taskInfo = task.getName() + "\nTime: " + task.getNotes() + (task.isCompleted() ? " (Completed)" : "");
+        taskView.setText(taskInfo);
         taskView.setTextSize(18);
-        taskView.setPadding(0, 8, 0, 8);
+        taskView.setPadding(250, 40, 0, 25);
         taskContainer.addView(taskView);
     }
 }

@@ -25,19 +25,20 @@ public class ChemistryActivity extends AppCompatActivity {
     };
 
     private final String[] answers = {
-            "Na",  // Case-insensitive matching
-            "gram", // Case-insensitive matching
+            "Na",
+            "gram",
             "condensation",
             "lithium",
             "H2O"
     };
 
+    static int count=0;
     private int currentQuestionIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chemistry); // Set the layout
+        setContentView(R.layout.activity_chemistry);
 
         questionText = findViewById(R.id.question_text);
         answerEditText = findViewById(R.id.answer_edit_text);
@@ -48,6 +49,7 @@ public class ChemistryActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String userAnswer = answerEditText.getText().toString().trim();
                 if (TextUtils.isEmpty(userAnswer)) {
                     Toast.makeText(ChemistryActivity.this, "Please enter your answer.", Toast.LENGTH_SHORT).show();
@@ -57,17 +59,15 @@ public class ChemistryActivity extends AppCompatActivity {
                 // Check answer (case-insensitive)
                 String lowerCaseUserAnswer = userAnswer.toLowerCase();
                 if (lowerCaseUserAnswer.equals(answers[currentQuestionIndex].toLowerCase())) {
-                    Toast.makeText(ChemistryActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                    count++;
+                    Toast.makeText(ChemistryActivity.this, "Correct! Your Score: " + count, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ChemistryActivity.this, "Incorrect. The answer is " + answers[currentQuestionIndex], Toast.LENGTH_SHORT).show();
                 }
 
-                // Check if it's the last question
                 if (currentQuestionIndex == questions.length - 1) {
-                    // End of quiz
-                    Toast.makeText(ChemistryActivity.this, "Quiz completed!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChemistryActivity.this, "Your Score: " + count, Toast.LENGTH_SHORT).show();
                 } else {
-                    // Move to next question
                     currentQuestionIndex++;
                     displayQuestion(currentQuestionIndex);
                     answerEditText.setText(""); // Clear answer field for next question

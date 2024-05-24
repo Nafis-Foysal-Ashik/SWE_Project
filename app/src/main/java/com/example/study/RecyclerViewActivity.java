@@ -1,4 +1,5 @@
-package com.example.study;// RecyclerViewActivity.java
+package com.example.study;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -30,7 +31,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Initialize your data
         dailyTaskList = new ArrayList<>();
         dailyTaskList.add(new DailyTask("Wake up"));
         dailyTaskList.add(new DailyTask("Exercise"));
