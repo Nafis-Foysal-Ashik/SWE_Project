@@ -194,7 +194,7 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="44dp"
             android:text="Q4. Which number is the equivalent to 3^(4)/3^(2)? "
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -643,6 +643,14 @@
             app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q10cm" />
+
+        <TextView
+            android:id="@+id/result_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="2373dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
