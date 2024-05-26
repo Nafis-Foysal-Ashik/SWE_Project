@@ -1,0 +1,10 @@
+<!-- res/layout/activity_study_materials.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudyMaterialsActivity">
+
+    <!-- Add any necessary views here if needed -->
+
+</RelativeLayout>

@@ -26,6 +26,13 @@
             android:exported="false" /> <!-- <activity -->
         <!-- android:name=".Mixed_Question" -->
         <!-- android:exported="false" /> -->
+        
+        <activity
+            android:name=".ShowTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
         <activity
             android:name=".InfoActivity"
             android:exported="false" />
