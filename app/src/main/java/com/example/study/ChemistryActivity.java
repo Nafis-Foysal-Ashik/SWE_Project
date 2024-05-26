@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ChemistryActivity extends AppCompatActivity {
+public class ChemistryActivity extends AppCompatActivity implements Observer {
 
     private TextView questionText;
     private EditText answerEditText;
@@ -26,6 +26,9 @@ public class ChemistryActivity extends AppCompatActivity {
         answerEditText = findViewById(R.id.answer_edit_text);
         submitButton = findViewById(R.id.submit_button);
         chemistryQuiz = new ChemistryQuiz();
+
+        // Register this activity as an observer
+        chemistryQuiz.addObserver(this);
 
         displayQuestion();
 
@@ -51,6 +54,7 @@ public class ChemistryActivity extends AppCompatActivity {
 
         boolean isCorrect = chemistryQuiz.checkAnswer(userAnswer);
         if (isCorrect) {
+            chemistryQuiz.incrementScore();
             showToast("Correct! Your Score: " + chemistryQuiz.getScore());
         } else {
             showToast("Incorrect. The answer is " + chemistryQuiz.getCurrentAnswer());
@@ -60,12 +64,16 @@ public class ChemistryActivity extends AppCompatActivity {
             showToast("Your Score: " + chemistryQuiz.getScore());
         } else {
             chemistryQuiz.moveToNextQuestion();
-            displayQuestion();
             answerEditText.setText(""); // Clear answer field for next question
         }
     }
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void update(String newQuestion) {
+        questionText.setText(newQuestion);
     }
 }
