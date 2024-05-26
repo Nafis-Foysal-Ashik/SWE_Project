@@ -1,7 +1,6 @@
 package com.example.study;
 
-public class ChemistryQuiz {
-
+public class ChemistryQuiz extends Observable {
     private final String[] questions = {
             "What is the symbol for sodium?",
             "What is the basic unit of mass in the SI system?",
@@ -39,6 +38,9 @@ public class ChemistryQuiz {
 
     public void moveToNextQuestion() {
         currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            notifyObservers(getCurrentQuestion());
+        }
     }
 
     public int getScore() {
