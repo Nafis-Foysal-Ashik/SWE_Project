@@ -17,12 +17,7 @@
 <!--        <activity-->
 <!--&lt;!&ndash;            android:name=".StudyMaterialsActivity"&ndash;&gt;-->
 <!--            android:exported="false" />-->
-        <activity
-            android:name=".ShowTaskActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerViewActivity"
-            android:exported="false" />
+        
         <activity
             android:name=".Grade"
             android:exported="false" />
