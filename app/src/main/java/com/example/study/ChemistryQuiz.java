@@ -1,5 +1,8 @@
 package com.example.study;
 
+/**
+ * java doc for chemistry quiz
+ */
 public class ChemistryQuiz extends Observable {
     private final String[] questions = {
             "What is the symbol for sodium?",

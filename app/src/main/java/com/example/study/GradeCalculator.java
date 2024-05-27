@@ -1,5 +1,9 @@
 package com.example.study;
 
+
+/**
+ * this is grade calculator
+ */
 public class GradeCalculator {
     public String calculateGrade(int mark) {
         if (mark > 100) {

@@ -52,7 +52,7 @@ public class Homepage extends AppCompatActivity {
         hotline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this , MathActivity.class);
+                Intent intent = new Intent(Homepage.this , RecyclerViewActivity.class);
                 startActivity(intent);
             }
         });
